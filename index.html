@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+</body>
+
+<script>
+
+    let number1= parseFloat(prompt(`Enter the first number:`));
+    let operators = prompt(`Enter the operator(eg.+,-,*,/)`)
+    let number2= parseFloat(prompt(`Enter the second number:`))
+
+
+
+    function calculation(num1,num2,operator){
+        let result=0;
+
+        switch(operator){
+
+            case '+':
+                result=num1+num2
+                break;
+
+            case '-':
+                result=num1-num2
+                break;
+
+            case '*':
+                result=num1*num2
+                break;
+
+            case '/':
+                if(num2 === 0){
+                    return 'Not divisible by 0'
+                }
+                else{
+                    result= num1/num2
+                }
+                break;
+
+
+            default:
+                return 'Enter a valid operator'
+            }
+
+            return result;
+
+            
+    }
+
+    let result= calculation(number1,number2,operators);
+    alert(`${number1}${operators}${number2} =${result}`);
+
+    
+ 
+
+
+
+
+// <!DOCTYPE html>
+// <html lang="en">
+// <head>
+//     <meta charset="UTF-8">
+//     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+//     <title>Document</title>
+// </head>
+// <body>
+
+// </body>
+
+// <script>
+
+//     function calculation(){
+//         let num1= parseFloat(prompt(`Enter the first number:`));
+//         let operator = prompt(`Enter the operator(eg.+,-,*,/)`);
+//         let num2= parseFloat(prompt(`Enter the second number:`));
+
+//         let result=0;
+
+//         switch(operator){
+
+//             case '+':
+//                 result=num1+num2
+//                 break;
+
+//             case '-':
+//                 result=num1-num2
+//                 break;
+
+//             case '*':
+//                 result=num1*num2
+//                 break;
+
+//             case '/':
+//                 if(num2 === 0){
+//                     return 'Not divisible by 0'
+//                 }
+//                 else{
+//                     result= num1/num2
+//                 }
+//                 break;
+
+//             default:
+//                 return 'Enter a valid operator'
+//             }
+
+//             alert(`${num1}${operator}${num2} =${result}`);
+           
+//     }
+
+//     calculation();
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>
