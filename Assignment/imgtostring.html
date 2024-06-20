@@ -1,0 +1,75 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="file-upload" type="file">
+
+    <button onclick="   upload();
+    " >upload</button>
+
+    <p class="display-string" onmouseover=" let mouseover= document.querySelector('.file-upload')"> </p>
+
+    <img  class="display-image" src="" alt="">
+</body>
+
+<script>
+
+    function upload(){        
+    let file = document.querySelector('.file-upload');
+    let stringfile = JSON.stringify(file);
+    document.querySelector('.display-string').innerHTML= stringfile;
+    }
+
+</script>
+</html> 
+ -->
+
+
+
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input class="file-upload" type="file">
+    <button onclick="upload()">Upload</button>
+
+    <p class="display-string" onmouseover="displayImage()"> </p>
+
+    <img class="display-image" src="" alt="">
+</body>
+
+<script>
+
+    function upload(){        
+        let fileInput = document.querySelector('.file-upload');
+        let file = fileInput.files[0];
+        if (file) {
+            let reader = new FileReader();
+            reader.onload = function(e) {
+                let imageDataUrl = e.target.result;
+                document.querySelector('.display-string').innerHTML = imageDataUrl;
+            }
+            reader.readAsDataURL(file);
+        } else {
+            alert('Please select a file.');
+        }
+    }
+
+    function displayImage() {
+        let imageDataUrl = document.querySelector('.display-string').innerHTML;
+        if (imageDataUrl) {
+            let img = document.querySelector('.display-image');
+            img.src = imageDataUrl;
+        }
+    }
+
+</script>
+</html>
