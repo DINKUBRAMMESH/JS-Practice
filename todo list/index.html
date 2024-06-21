@@ -1,0 +1,89 @@
+<!-- todolist which keeps only one todo -->
+
+<!-- <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Todo List Practice</p>
+
+    <input class="userTodo" type="text" placeholder="Todo name">
+
+    <button onclick=" displayfunction() "    
+    
+    >Add</button>
+
+    <p class="display"></p>
+
+<script>
+
+    let arr =[]
+
+        function displayfunction(){
+
+            let inputValue = document.querySelector('.userTodo').value
+            arr.push(inputValue)
+            // console.log(arr)
+            document.querySelector('.display').innerHTML= arr
+            document.querySelector('.userTodo').value = '' 
+
+        }
+
+</script>
+
+</body>
+</html>
+ -->
+
+ 
+
+ <!-- todolist which can keep multiple todo's in seperate line  -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <p>Todo List Practice</p>
+
+    <input class="userTodo" type="text" placeholder="Todo name">
+
+    <button onclick=" displayfunction() "    
+    
+    >Add</button>
+
+    <p class="display"></p>
+
+<script>
+
+    let arr =[]
+
+        function displayfunction(){
+
+            let inputValue = document.querySelector('.userTodo').value
+            arr.push(inputValue)
+            
+            let  displayElement = ''
+            
+          for( let array of arr ){
+
+            displayElement= displayElement + array + ' <br>'
+
+          }
+          document.querySelector('.display').innerHTML= displayElement
+          
+          document.querySelector('.userTodo').value = '' 
+
+        }
+</script>
+
+</body>
+</html> 
